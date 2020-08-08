@@ -2,13 +2,16 @@ const allNum = [7, 55, 14, 6, 37, 90, 23, 1, 'five', 3.14]
 const numbers = [-2, 85, 3, -25, 1, 5, -6]
 
 // #1 створення масиву з випадкових чисел
-function getRandomArray (length, min, max) {
-  let arr = [];
-  for (let i = 0; i < length; i++) {
-  arr[i] = Math.round(Math.random() * (max - min)) + min;
-  }
-  return arr;
-}
+// function getRandomArray (length, min, max) {
+//   let arr = [];
+//   for (let i = 0; i < length; i++) {
+//   arr[i] = Math.round(Math.random() * (max - min)) + min;
+//   }
+//   return arr;
+// }
+
+const getRandomArray = (length, min, max) => Array.from({ length }).map(() => Math.round(min - 0.5 + Math.random() * (max - min + 1)) );
+
 console.log(`#1: ${getRandomArray(10, 0, 100)}`)
 
 // #3(1) знаходить середнє арифметичне
@@ -42,8 +45,8 @@ const filterEvenNumbers = integers.filter(element => element %2 !== 0)
 console.log(`#5: ${filterEvenNumbers}`);
 
 // #6 кількість чисел більших за 0
-const countPositiveNumbers = numbers.filter(element => element > 0)
-console.log(`#6: ${countPositiveNumbers.length}`);
+const countPositiveNumbers = numbers.filter(element => element > 0).length
+console.log(`#6: ${countPositiveNumbers}`);
 
 // #7 числа, які діляться на ціло на 5
 const getDividedNumbers = numbers.filter(element => element %5 === 0)
