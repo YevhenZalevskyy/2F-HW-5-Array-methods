@@ -11,7 +11,8 @@ const numbers = [-2, 85, 3, -25, 1, 5, -6]
 //   return arr;
 // }
 
-const getRandomArray = (length, min, max) => Array.from({ length }).map(() => Math.round(min - 0.5 + Math.random() * (max - min + 1)) )
+const getRandomArray = (length, min, max) => Array.from({ length }).map(() =>
+Math.round(Math.random() * ((max - min) + min)) )
 console.log(`#1: ${getRandomArray(10, 0, 100)}`)
 
 // #3(1) знаходить середнє арифметичне
