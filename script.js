@@ -2,6 +2,7 @@ const allNum = [7, 55, 14, 6, 37, 90, 23, 1, 'five', 3.14]
 const numbers = [-2, 85, 3, -25, 1, 5, -6]
 
 // #1 створення масиву з випадкових чисел
+
 // function getRandomArray (length, min, max) {
 //   let arr = [];
 //   for (let i = 0; i < length; i++) {
@@ -10,8 +11,7 @@ const numbers = [-2, 85, 3, -25, 1, 5, -6]
 //   return arr;
 // }
 
-const getRandomArray = (length, min, max) => Array.from({ length }).map(() => Math.round(min - 0.5 + Math.random() * (max - min + 1)) );
-
+const getRandomArray = (length, min, max) => Array.from({ length }).map(() => Math.round(min - 0.5 + Math.random() * (max - min + 1)) )
 console.log(`#1: ${getRandomArray(10, 0, 100)}`)
 
 // #3(1) знаходить середнє арифметичне
